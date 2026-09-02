@@ -5,7 +5,7 @@ const env = process.env.ENV || 'sandbox';
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: false, // employee-add tests share app state; keep sequential for now
+  fullyParallel: false, 
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 2 : 1,
@@ -15,10 +15,8 @@ export default defineConfig({
   ],
   use: {
     baseURL: environments[env].baseURL,
-    testIdAttribute: 'data-testid', // adjust if the app uses data-test / data-qa instead
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
     actionTimeout: 10_000,
   },
   projects: [
