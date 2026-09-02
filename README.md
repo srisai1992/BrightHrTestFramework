@@ -44,9 +44,12 @@ playwright-framework/
 │   └── testData.ts          # credentials + employee test data
 ├── fixtures/
 │   └── test.ts              # custom fixtures (page objects, auto-login)
+├── github/workflows
+│   └── playwright.yml       # pipeline configuration
 ├── pages/
 │   ├── LoginPage.ts
 │   └── EmployeePage.ts
+│   └── SidebarComponent.ts   #For sidebar navigation those can accessed from any page
 ├── types/
 │   └── employee.types.ts
 ├── tests/
