@@ -12,13 +12,10 @@ npx playwright install --with-deps
 ```bash
 npm test              # headless
 npm run test:headed   # see the browser
-npm run test:ui       # Playwright's interactive UI mode (great for debugging live)
 npm run report        # open the last HTML report
+npm run codegen       # Recod and playback session
 ```
 
-```bash
-npm run codegen
-```
 
 ## Structure
 
